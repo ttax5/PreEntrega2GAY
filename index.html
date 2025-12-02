@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="paxaPOS" />
+    <title>paxaPOS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ========== ENCABEZADO ========== -->
+    <header>
+      <div class="container">
+        <img src="images/logo.png" alt="paxaPOS Logo" class="logo" />
+        <h1>paxaPOS</h1>
+        <nav>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Services</a></li>
+            <li><a href="#precios">Prices</a></li>
+            <li><a href="#contacto">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+    <main>
+      <!-- Sección Hero / Inicio -->
+      <section id="inicio" class="hero">
+        <div class="container">
+          <h2>Sistema de Punto de Venta Moderno</h2>
+          <p>
+            Gestiona tu negocio de forma eficiente con nuestra solución integral
+            de punto de venta
+          </p>
+          <a href="#contacto" class="btn">Solicitar Demo</a>
+        </div>
+      </section>
+
+      <!-- Sección de Servicios -->
+      <section id="servicios" class="servicios">
+        <div class="container">
+          <h2>Nuestros Servicios</h2>
+          <p class="seccion-descripcion">
+            Ofrecemos soluciones completas para tu negocio
+          </p>
+
+          <div class="servicios-grid">
+            <!-- Servicio 1 -->
+            <article class="servicio">
+              <img
+                src="images/servicio1.png"
+                alt="Sistema POS"
+                class="servicio-img"
+              />
+              <h3>Sistema POS Completo</h3>
+              <p>
+                Software de punto de venta intuitivo y fácil de usar para
+                gestionar ventas, inventario y clientes.
+              </p>
+              <ul class="caracteristicas">
+                <li>Interfaz intuitiva</li>
+                <li>Gestión de inventario</li>
+                <li>Reportes en tiempo real</li>
+              </ul>
+            </article>
+
+            <!-- Servicio 2 -->
+            <article class="servicio">
+              <img src="images/servicio2.png" alt="Nube" class="servicio-img" />
+              <h3>Almacenamiento en la Nube</h3>
+              <p>
+                Accede a tus datos desde cualquier lugar con nuestro sistema
+                basado en la nube.
+              </p>
+              <ul class="caracteristicas">
+                <li>Acceso remoto</li>
+                <li>Backup automático</li>
+                <li>Sincronización instantánea</li>
+              </ul>
+            </article>
+
+            <!-- Servicio 3 -->
+            <article class="servicio">
+              <img
+                src="images/servicio3.png"
+                alt="Reportes"
+                class="servicio-img"
+              />
+              <h3>Reportes y Análisis</h3>
+              <p>
+                Toma decisiones informadas con nuestros reportes detallados y
+                análisis de ventas.
+              </p>
+              <ul class="caracteristicas">
+                <li>Dashboards personalizados</li>
+                <li>Análisis de tendencias</li>
+                <li>Exportación de datos</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Precios -->
+      <section id="precios" class="precios">
+        <div class="container">
+          <h2>Planes y Precios</h2>
+          <p class="seccion-descripcion">
+            Elige el plan que mejor se adapte a tu negocio
+          </p>
+
+          <div class="precios-grid">
+            <!-- Plan Básico -->
+            <article class="plan">
+              <h3>Plan Básico</h3>
+              <p class="precio">$20.000<span class="periodo">/mes</span></p>
+              <ul class="plan-caracteristicas">
+                <li>1 Terminal POS</li>
+                <li>Hasta 100 productos</li>
+                <li>Reportes básicos</li>
+                <li>Soporte por email</li>
+              </ul>
+              <a href="#contacto" class="btn-plan">Elegir Plan</a>
+            </article>
+
+            <!-- Plan Profesional -->
+            <article class="plan plan-destacado">
+              <h3>Plan Profesional</h3>
+              <p class="precio">$40.000<span class="periodo">/mes</span></p>
+              <ul class="plan-caracteristicas">
+                <li>3 Terminales POS</li>
+                <li>Productos ilimitados</li>
+                <li>Reportes avanzados</li>
+                <li>Soporte prioritario</li>
+              </ul>
+              <a href="#contacto" class="btn-plan">Elegir Plan</a>
+            </article>
+
+            <!-- Plan Empresarial -->
+            <article class="plan">
+              <h3>Plan Empresarial</h3>
+              <p class="precio">$60.000<span class="periodo">/mes</span></p>
+              <ul class="plan-caracteristicas">
+                <li>Terminales ilimitadas</li>
+                <li>Productos ilimitados</li>
+                <li>Análisis personalizado</li>
+                <li>Soporte 24/7</li>
+              </ul>
+              <a href="#contacto" class="btn-plan">Elegir Plan</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Contacto -->
+      <section id="contacto" class="contacto">
+        <div class="container">
+          <h2>Contacto</h2>
+          <p class="seccion-descripcion">
+            ¿Tienes preguntas? Estamos aquí para ayudarte
+          </p>
+
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre Completo:</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ingresa tu nombre"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="+54 11 1234-5678"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="5"
+                placeholder="Cuéntanos sobre tu negocio..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn">Enviar Mensaje</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 paxaPOS. Todos los derechos reservados.</p>
+        <p class="footer-info">Sistema de punto de venta profesional</p>
+      </div>
+    </footer>
+  </body>
+</html>
