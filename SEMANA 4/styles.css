@@ -1,0 +1,23 @@
+.tomato-bg {
+  background-color: tomato;
+}
+.tomato-bg li a:hover {
+  background-color: aqua;
+}
+
+.tomato-bg li a:active {
+  background-color: rgb(154, 29, 7);
+  color: whitesmoke;
+}
+
+.ejemplo div:nth-child(4) {
+  background-color: tomato;
+}
+
+.ejemplo div:hover {
+  background-color: red;
+}
+
+.ejemplo .otro-color:hover {
+  background-color: blue;
+}
