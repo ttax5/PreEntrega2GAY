@@ -5,98 +5,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>paxaPOS - Sistema de Punto de Venta</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="stylesheet" href="/SEMANA 2/css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-  <!-- Encabezado -->
   <header>
-    <div class="container">
-      <img src="images/logo.png" class="logo">
-      <h1>paxaPOS</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="servicios.html">Servicios</a></li>
-          <li><a href="precios.html">Precios</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c3e50;">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="images/logo.png" alt="paxaPOS Logo" width="40" height="40"
+            class="d-inline-block align-text-top me-2 ">
+          paxaPOS
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/SEMANA 2/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/SEMANA 2/precios.html">Precios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/SEMANA 2/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- Contenido Principal -->
   <main>
-    <section class="hero">
+    <section class="hero border-bottom pb-5">
       <div class="container">
-        <h2>Sistema de Punto de Venta Moderno</h2>
-        <p>Gestiona tu negocio de forma eficiente con nuestra solución integral de punto de venta</p>
-        <a href="contacto.html" class="btn">Solicitar Demo</a>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2>Sistema de Punto de Venta Moderno</h2>
+            <p>Gestiona tu negocio de forma eficiente con nuestra solución integral de punto de venta</p>
+            <a href="contacto.html" class="btn-custom">Solicitar Demo</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="servicios">
+    <section class="servicios border-bottom pb-5">
       <div class="container">
-        <h2>Nuestra Historia</h2>
-        <p class="seccion-descripcion">Cómo empezó todo</p>
-        <p>paxaPOS nació en 2020 con una misión clara: facilitar la gestión de negocios mediante tecnología accesible y
-          eficiente. Desde entonces, hemos ayudado a cientos de empresas a modernizar sus operaciones y aumentar su
-          productividad.</p><br>
-        <p>Nuestro equipo está formado por profesionales apasionados por la tecnología y el servicio al cliente.
-          Trabajamos día a día para ofrecer la mejor solución de punto de venta del mercado.</p>
+        <div class="text-center mb-5">
+          <h2>Nuestra Historia</h2>
+          <p class="seccion-descripcion">Cómo empezó todo</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <p class="mb-3">paxaPOS nació en 2020 con una misión clara: facilitar la gestión de negocios mediante
+              tecnología
+              accesible y eficiente. Desde entonces, hemos ayudado a cientos de empresas a modernizar sus operaciones y
+              aumentar su productividad.</p>
+            <p>Nuestro equipo está formado por profesionales apasionados por la tecnología y el servicio al cliente.
+              Trabajamos día a día para ofrecer la mejor solución de punto de venta del mercado.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="precios">
+
+    <section class="servicios border-bottom pb-5">
       <div class="container">
-        <h2>Por Qué Elegirnos</h2>
-        <p class="seccion-descripcion">Razones para confiar en paxaPOS</p>
+        <div class="text-center mb-5">
+          <h2>Por Qué Elegirnos</h2>
+          <p class="seccion-descripcion">Razones para confiar en paxaPOS</p>
+        </div>
 
-        <div class="servicios-grid">
-          <article class="servicio">
-            <h3>Experiencia</h3>
-            <p>Más de 4 años ayudando a negocios a crecer con nuestra tecnología probada.</p>
-            <ul class="caracteristicas">
-              <li>Más de 500 clientes</li>
-              <li>Múltiples industrias</li>
-              <li>Casos de éxito</li>
-            </ul>
-          </article>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <article class="servicio h-100">
+              <h3>Experiencia</h3>
+              <p>Más de 4 años ayudando a negocios a crecer con nuestra tecnología probada.</p>
+              <ul class="caracteristicas">
+                <li>Más de 500 clientes</li>
+                <li>Múltiples industrias</li>
+                <li>Casos de éxito</li>
+              </ul>
+            </article>
+          </div>
 
-          <article class="servicio">
-            <h3>Confiabilidad</h3>
-            <p>Sistema robusto y seguro que funciona cuando más lo necesitas.</p>
-            <ul class="caracteristicas">
-              <li>99.9% uptime</li>
-              <li>Seguridad garantizada</li>
-              <li>Respaldos constantes</li>
-            </ul>
-          </article>
+          <div class="col-md-4 mb-4">
+            <article class="servicio h-100">
+              <h3>Confiabilidad</h3>
+              <p>Sistema robusto y seguro que funciona cuando más lo necesitas.</p>
+              <ul class="caracteristicas">
+                <li>99.9% uptime</li>
+                <li>Seguridad garantizada</li>
+                <li>Respaldos constantes</li>
+              </ul>
+            </article>
+          </div>
 
-          <article class="servicio">
-            <h3>Facilidad de Uso</h3>
-            <p>Interfaz intuitiva diseñada pensando en la experiencia del usuario.</p>
-            <ul class="caracteristicas">
-              <li>Curva de aprendizaje corta</li>
-              <li>Diseño simple</li>
-              <li>Capacitación incluida</li>
-            </ul>
-          </article>
+          <div class="col-md-4 mb-4">
+            <article class="servicio h-100">
+              <h3>Facilidad de Uso</h3>
+              <p>Interfaz intuitiva diseñada pensando en la experiencia del usuario.</p>
+              <ul class="caracteristicas">
+                <li>Curva de aprendizaje corta</li>
+                <li>Diseño simple</li>
+                <li>Capacitación incluida</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Pie de pagina -->
-  <footer>
-    <div class="container">
+  <footer class="bg-#2c3e50 text-white py-4 mt-10">
+    <div class="container text-center">
       <p>&copy; 2024 paxaPOS. Todos los derechos reservados.</p>
       <p class="footer-info">Sistema de punto de venta profesional</p>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
