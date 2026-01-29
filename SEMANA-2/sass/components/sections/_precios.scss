@@ -1,10 +1,12 @@
+@use '../../utils/variables' as *;
+
 .precios {
   padding: 60px 0;
 
   h2 {
     text-align: center;
     font-size: 32px;
-    color: #2c3e50;
+    color: $color-secondary;
     margin-bottom: 15px;
     text-transform: uppercase;
   }
@@ -12,12 +14,12 @@
 
 .plan {
   padding: 30px 20px;
-  background-color: white;
-  border: 2px solid #ddd;
+  background-color: $color-bg-light;
+  border: 2px solid $color-border;
   height: 100%;
 
   h3 {
-    color: #2c3e50;
+    color: $color-secondary;
     font-size: 24px;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -25,20 +27,20 @@
 }
 
 .plan-destacado {
-  border-color: #3498db;
+  border-color: $color-primary;
   border-width: 3px;
 }
 
 .precio {
   font-size: 48px;
-  color: #3498db;
+  color: $color-primary;
   font-weight: bold;
   margin-bottom: 20px;
 }
 
 .periodo {
   font-size: 18px;
-  color: #666;
+  color: $color-text-muted;
 }
 
 .plan-caracteristicas {
@@ -48,7 +50,7 @@
   margin-bottom: 25px;
 
   li {
-    color: #555;
+    color: $color-text-light;
     margin-bottom: 12px;
     padding-left: 10px;
   }

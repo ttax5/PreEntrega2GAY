@@ -1,6 +1,6 @@
-.btn-custom {
-  background-color: #3498db;
-  color: white;
+@use '../../utils/variables' as *;
+
+%btn-base {
   padding: 12px 30px;
   text-decoration: none;
   text-transform: uppercase;
@@ -8,23 +8,25 @@
   cursor: pointer;
   border-radius: 4px;
   display: inline-block;
+  color: white; // Common color
+}
+
+.btn-custom {
+  @extend %btn-base;
+  background-color: $color-primary;
 
   &:hover {
-    background-color: #2980b9;
+    background-color: $color-primary-dark;
     color: white;
   }
 }
 
 .btn-plan {
-  background-color: #2c3e50;
-  color: white;
-  padding: 10px 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  display: inline-block;
+  @extend %btn-base;
+  background-color: $color-secondary;
+  padding: 10px 25px; // Specific overwrite
 
   &:hover {
-    background-color: #34495e;
+    background-color: $color-secondary-dark;
   }
 }
