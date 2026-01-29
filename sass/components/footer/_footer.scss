@@ -1,0 +1,17 @@
+@use '../../utils/variables' as *;
+
+footer {
+  background-color: $color-secondary;
+  color: $color-text-inverted;
+  text-align: center;
+  padding: 30px 0;
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+.footer-info {
+  color: $color-footer-text;
+  font-style: italic;
+}

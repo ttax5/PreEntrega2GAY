@@ -1,0 +1,32 @@
+@use '../../utils/variables' as *;
+
+%btn-base {
+  padding: 12px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  color: white; // Common color
+}
+
+.btn-custom {
+  @extend %btn-base;
+  background-color: $color-primary;
+
+  &:hover {
+    background-color: $color-primary-dark;
+    color: white;
+  }
+}
+
+.btn-plan {
+  @extend %btn-base;
+  background-color: $color-secondary;
+  padding: 10px 25px; // Specific overwrite
+
+  &:hover {
+    background-color: $color-secondary-dark;
+  }
+}

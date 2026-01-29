@@ -1,0 +1,39 @@
+@use '../../utils/variables' as *;
+
+.contacto {
+  background-color: $color-bg-light;
+  padding: 60px 0;
+
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    color: $color-secondary;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    font-weight: bold;
+    color: $color-secondary;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid $color-border;
+    resize: none;
+  }
+}

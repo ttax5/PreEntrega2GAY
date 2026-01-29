@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+// Mapa de colores para generar utilidades
+$theme-colors: (
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'light': $color-bg-light,
+  'dark': $color-text-main
+);
+
+// Bucle @each para generar clases de color
+@each $name, $color in $theme-colors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+}

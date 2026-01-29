@@ -1,0 +1,17 @@
+// Utils (Variables, Mixins)
+@use 'utils/variables' as *;
+@use 'utils/mixins' as *;
+@use 'utils/utilities';
+
+// Base
+@use 'base/base';
+
+// Componentes
+@use 'components/buttons/buttons';
+@use 'components/footer/footer';
+
+// Secciones
+@use 'components/sections/hero';
+@use 'components/sections/servicios';
+@use 'components/sections/precios';
+@use 'components/sections/contacto';

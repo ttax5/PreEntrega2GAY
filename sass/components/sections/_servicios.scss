@@ -1,0 +1,55 @@
+@use '../../utils/variables' as *;
+
+.servicios {
+  padding: 60px 0;
+  background-color: $color-bg-light;
+
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    color: $color-secondary;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+}
+
+.seccion-descripcion {
+  text-align: center;
+  color: $color-text-muted;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.servicio {
+  padding: 20px;
+  background-color: $color-bg-light;
+  border: 2px solid $color-border-dark;
+  height: 100%;
+
+  h3 {
+    color: $color-secondary;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $color-text-light;
+    margin-bottom: 15px;
+  }
+}
+
+.servicio-img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.caracteristicas {
+  list-style: disc;
+  text-align: left;
+  padding-left: 20px;
+
+  li {
+    color: $color-text-light;
+    margin-bottom: 8px;
+  }
+}
