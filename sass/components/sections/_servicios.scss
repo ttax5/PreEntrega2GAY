@@ -1,4 +1,4 @@
-@use '../../utils/variables' as *;
+@use "../../utils/variables" as *;
 
 .servicios {
   padding: 60px 0;
@@ -10,6 +10,9 @@
     color: $color-secondary;
     margin-bottom: 15px;
     text-transform: uppercase;
+    animation: slideInLeft 1s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
   }
 }
 
@@ -18,6 +21,9 @@
   color: $color-text-muted;
   font-style: italic;
   margin-bottom: 40px;
+  animation: slideInRight 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
 }
 
 .servicio {
@@ -25,6 +31,21 @@
   background-color: $color-bg-light;
   border: 2px solid $color-border-dark;
   height: 100%;
+  /* 
+    Modern styling with Scroll-driven Animations 
+    This allows the animation to play as the element enters the viewport
+    Support: Chrome 115+, Edge 115+
+  */
+  animation: fadeInUp 1s ease-out both; // Uses translate
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+  transition: scale 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    scale: 1.05; // Independent scale
+    translate: 0 -10px; // Maintain the float effect independently
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
 
   h3 {
     color: $color-secondary;
@@ -35,6 +56,17 @@
   p {
     color: $color-text-light;
     margin-bottom: 15px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

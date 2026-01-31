@@ -8,11 +8,14 @@
     font-size: 36px;
     color: $color-secondary;
     margin-bottom: 20px;
+    animation: slideInLeft 0.8s ease-out forwards;
   }
 
   p {
     font-size: 18px;
     color: $color-text-light;
     margin-bottom: 30px;
+    opacity: 0; // Start invisible
+    animation: slideInRight 0.8s ease-out 0.3s forwards;
   }
 }
