@@ -9,6 +9,7 @@
     color: $color-secondary;
     margin-bottom: 15px;
     text-transform: uppercase;
+    animation: zoomIn 0.8s ease-out both;
   }
 }
 
@@ -17,6 +18,15 @@
   background-color: $color-bg-light;
   border: 2px solid $color-border;
   height: 100%;
+  transition: scale 0.3s ease, box-shadow 0.3s ease; // Use dedicated property
+  animation: fadeInUp 0.8s ease-out both; // Now uses 'translate'
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+
+  &:hover {
+    scale: 1.05; // Independent transform property
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
 
   h3 {
     color: $color-secondary;
@@ -29,6 +39,37 @@
 .plan-destacado {
   border-color: $color-primary;
   border-width: 3px;
+  position: relative;
+  z-index: 1;
+
+  /* 
+    "Parpadeo" via Pseudo-element:
+    We use ::before so it doesn't conflict with the main element's 
+    hover shadow or entrance animation.
+  */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 4px; // Match card radius
+    animation: pulseBorder 2s infinite;
+  }
+}
+
+@keyframes pulseBorder {
+  0% {
+    box-shadow: 0 0 0 0 rgba($color-primary, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba($color-primary, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($color-primary, 0);
+  }
 }
 
 .precio {

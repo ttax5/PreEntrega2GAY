@@ -76,6 +76,71 @@ body.fullscreen-layout section > .container {
     padding: 10px 0;
   }
 }
+/* 
+  Global Animations 
+  Reusable keyframes for entrance and interaction effects.
+*/
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    translate: 0 50px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    translate: 0 50px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
 .btn-plan, .btn-custom {
   padding: 12px 30px;
   text-decoration: none;
@@ -85,6 +150,11 @@ body.fullscreen-layout section > .container {
   border-radius: 4px;
   display: inline-block;
   color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-plan:hover, .btn-custom:hover {
+  animation: pulse 1s infinite;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-custom {
@@ -126,11 +196,14 @@ footer p {
   font-size: 36px;
   color: #2c3e50;
   margin-bottom: 20px;
+  animation: slideInLeft 0.8s ease-out forwards;
 }
 .hero p {
   font-size: 18px;
   color: #555;
   margin-bottom: 30px;
+  opacity: 0;
+  animation: slideInRight 0.8s ease-out 0.3s forwards;
 }
 
 .servicios {
@@ -143,6 +216,9 @@ footer p {
   color: #2c3e50;
   margin-bottom: 15px;
   text-transform: uppercase;
+  animation: slideInLeft 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
 }
 
 .seccion-descripcion {
@@ -150,6 +226,9 @@ footer p {
   color: #666;
   font-style: italic;
   margin-bottom: 40px;
+  animation: slideInRight 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
 }
 
 .servicio {
@@ -157,6 +236,20 @@ footer p {
   background-color: #ffffff;
   border: 2px solid #c5c5c5;
   height: 100%;
+  /* 
+    Modern styling with Scroll-driven Animations 
+    This allows the animation to play as the element enters the viewport
+    Support: Chrome 115+, Edge 115+
+  */
+  animation: fadeInUp 1s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+  transition: scale 0.3s ease, box-shadow 0.3s ease;
+}
+.servicio:hover {
+  scale: 1.05;
+  translate: 0 -10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 .servicio h3 {
   color: #2c3e50;
@@ -168,6 +261,16 @@ footer p {
   margin-bottom: 15px;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .servicio-img {
   width: 100px;
   margin-bottom: 15px;
@@ -192,6 +295,7 @@ footer p {
   color: #2c3e50;
   margin-bottom: 15px;
   text-transform: uppercase;
+  animation: zoomIn 0.8s ease-out both;
 }
 
 .plan {
@@ -199,6 +303,14 @@ footer p {
   background-color: #ffffff;
   border: 2px solid #ddd;
   height: 100%;
+  transition: scale 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+.plan:hover {
+  scale: 1.05;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 .plan h3 {
   color: #2c3e50;
@@ -210,8 +322,37 @@ footer p {
 .plan-destacado {
   border-color: #3498db;
   border-width: 3px;
+  position: relative;
+  z-index: 1;
+  /* 
+    "Parpadeo" via Pseudo-element:
+    We use ::before so it doesn't conflict with the main element's 
+    hover shadow or entrance animation.
+  */
+}
+.plan-destacado::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 4px;
+  animation: pulseBorder 2s infinite;
 }
 
+@keyframes pulseBorder {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(52, 152, 219, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+  }
+}
 .precio {
   font-size: 48px;
   color: #3498db;
