@@ -19,5 +19,5 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: "SEMANA-2" # La carpeta que queremos publicar
+          folder: "." # La carpeta raíz del repositorio
           branch: gh-pages # La rama donde se publicará
